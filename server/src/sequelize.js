@@ -14,6 +14,5 @@ module.exports = () => {
         );
       });
     models.sequelize.sync();
-    // models.sequelize.sync({ force: true });
   }
 };

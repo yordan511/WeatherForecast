@@ -1,5 +1,6 @@
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+const { hashPassword } = require("../helpers/");
 
 module.exports = (sequelize, DataTypes) => {
   const Model = sequelize.define("User", {
@@ -14,9 +15,7 @@ module.exports = (sequelize, DataTypes) => {
 
   Model.beforeSave(async (user, options) => {
     if (user.changed("password")) {
-      const salt = await bcrypt.genSalt(10);
-      const hash = await bcrypt.hash(user.password, salt);
-      user.password = hash;
+      user.password = hashPassword(user.password);
     }
   });
 

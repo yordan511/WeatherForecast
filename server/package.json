@@ -44,7 +44,7 @@
     "setupFiles": [
       "dotenv/config"
     ],
-    "collectCoverage": true,
+    "collectCoverage": false,
     "collectCoverageFrom": [
       "!**/node_modules/**",
       "!**/build/**",
