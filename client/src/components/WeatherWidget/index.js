@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 
 import useSWR from "swr";
 import { getToken } from "../../services/Authentication";
@@ -27,6 +27,12 @@ export function WeatherWidget() {
       suspense: true,
     }
   );
+  const updateChartWidth = useCallback(() => {
+    const width = window.innerWidth;
+    if (chart) {
+      chart.resize(width);
+    }
+  }, [chart]);
   window.addEventListener("resize", updateChartWidth);
 
   useEffect(() => {
@@ -40,21 +46,14 @@ export function WeatherWidget() {
       }
       window.removeEventListener("resize", updateChartWidth);
     };
-  }, [data]);
+  }, [data, error, updateChartWidth, chart]);
 
   useEffect(() => {
     if (chart) {
       const myOptions = generateOptions(data);
       chart.setOption(myOptions);
     }
-  }, [chart]);
-
-  function updateChartWidth() {
-    const width = window.innerWidth;
-    if (chart) {
-      chart.resize(width);
-    }
-  }
+  }, [chart, data]);
 
   function getChart() {
     if (chartContainerRef.current) {

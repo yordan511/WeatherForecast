@@ -67,7 +67,7 @@ const LoginForm = ({ type, history, location, ...rest }) => {
     if (isUserAuthenticated()) {
       history.push("/");
     }
-  }, []);
+  }, [history]);
 
   const handleNotificationClose = (event, reason) => {
     if (reason === "clickaway") {
