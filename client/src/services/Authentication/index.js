@@ -23,6 +23,10 @@ export async function login(email, password) {
   }
 }
 
+export function getToken() {
+  return window.localStorage.getItem("userToken");
+}
+
 export function logout() {
   window.localStorage.removeItem("userToken");
 }
