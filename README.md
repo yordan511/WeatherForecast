@@ -1,4 +1,4 @@
-# Weather forecaset Web
+# Weather forecast Web
 
 ## Libraries and tools 🛠
 
