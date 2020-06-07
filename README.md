@@ -2,9 +2,9 @@
 
 ## Libraries and tools 🛠
 
-• React for the UI, Javascript and NodeJs for the backend
-• Koa for the web server <a href="https://koajs.com">KOA js</a>
-• the Open Weather API for the weather forecasts <a href="https://openweathermap.org/api">Open weaher API</a>
+<li> React for the UI, Javascript and NodeJs for the backend </li>
+<li> Koa for the web server <a href="https://koajs.com">KOA js</a> </li>
+<li> the Open Weather API for the weather forecasts <a href="https://openweathermap.org/api">Open weaher API</a> </li>
 
 ## Setup application for development
 
