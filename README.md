@@ -1,4 +1,4 @@
-# Weather forecast Web
+# Weather forecast Web Application
 
 ## Libraries and tools 🛠
 
@@ -10,12 +10,12 @@
 
 <pre>
 For backend:
-    1. Run  **cd ./server; npm i** from project root folder
+    1. Run  <b>cd ./server; npm i;</b> from project root folder
     2. create .env file in /server root folder You can follow instruction and schema from ./server/env.example
-    3. Run **npm run start:dev**
+    3. Run npm run start:dev
     4. The app will run on http://localhost:8000
 For frontend:
-    1. Run **cd ./client; npm i;** from project root folder
-    2. npm start
+    1. Run <b>cd ./client; npm i; </b> from project root folder
+    2. Run <b>npm start</b>
     3. The application will start on http://localhost:3000 
 </pre>
